@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import { Header } from "./components/header";
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
-}
+    <header>
+      <Header title="Get ready for adventure!" backgroundColor="#282627" />
+    </header>
+  );
+};
