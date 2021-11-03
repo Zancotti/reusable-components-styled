@@ -1,23 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 export const ProfileImage = ({ image, name, textColor }) => {
-  const [IsMouseOver, setIsMouseOver] = useState(false);
-
   return (
-    <ProfileContainer
-      onMouseEnter={() => {
-        setIsMouseOver(true);
-      }}
-      onmouseleave={() => {
-        setIsMouseOver(false);
-      }}
-    >
-      <Profile
-        src={image}
-        alt="person"
-        // style={IsMouseOver ? { opacity: 0.25 } : { opacity: 1 }}
-      />
+    <ProfileContainer>
+      <Profile src={image} alt="person" />
       <Overlay>
         <Text style={{ color: textColor }}>
           <p>{name}</p>
